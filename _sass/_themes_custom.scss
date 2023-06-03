@@ -3,14 +3,14 @@
  ******************************************************************************/
 
 // Day theme colors
-$burnt-orange-color:          #E65100 !default;                         // orange 900 material.io
-$light-burnt-orange-color:    #FF9800 !default;                         // orange 500 material.io
-// $light-burnt-orange-color:    lighten($burnt-orange-color, 10%);
+$day-color-main:             #E65100 !default;                         // orange 900 material.io
+$day-color-hover:            #FF9800 !default;                         // orange 500 material.io
 
 // Night theme colors
-$bluish-green-color:           #2ce0a1 !default;
-$dark-bluish-green-color:      darken($bluish-green-color, 10%); 
-$card-grey-color:              #212121 !default;
+$night-background-color:     $black-color !default;                         
+$night-color-main:           #2ce0a1 !default;
+$night-color-hover:          darken($night-color-main, 10%); 
+$night-card-color:           #212121 !default;
 
 
 /*******************************************************************************
@@ -22,13 +22,13 @@ $card-grey-color:              #212121 !default;
   --global-code-bg-color: #{$code-bg-color-light};
   --global-text-color: #{$black-color};
   --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$burnt-orange-color};
-  --global-hover-color: #{$light-burnt-orange-color};
+  --global-theme-color: #{$day-color-main};
+  --global-hover-color: #{$day-color-hover};
   --global-footer-bg-color: #{$grey-color-dark};
   --global-footer-text-color: #{$grey-color-light};
   --global-footer-link-color: #{$white-color};
   --global-distill-app-color: #{$grey-color};
-  --global-divider-color: #{$burnt-orange-color};
+  --global-divider-color: #{$day-color-main};
   --global-card-bg-color: #{$white-color};
 
   .fa-sun {
@@ -42,18 +42,18 @@ $card-grey-color:              #212121 !default;
 }
 
 html[data-theme='dark'] {
-  --global-bg-color: #{$black-color};
+  --global-bg-color: #{$night-background-color};
   --global-code-bg-color: #{$code-bg-color-dark};
   --global-text-color: #{$grey-color-light};
   --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$bluish-green-color};
-  --global-hover-color: #{$dark-bluish-green-color};
+  --global-theme-color: #{$night-color-main};
+  --global-hover-color: #{$night-color-hover};
   --global-footer-bg-color: #{$grey-color-light};
   --global-footer-text-color: #{$grey-color-dark};
   --global-footer-link-color: #{$black-color};
   --global-distill-app-color: #{$grey-color-light};
-  --global-divider-color: #{$bluish-green-color};
-  --global-card-bg-color: #{$card-grey-color};
+  --global-divider-color: #{$night-color-main};
+  --global-card-bg-color: #{$night-card-color};
 
   .fa-sun {
     padding-left: 10px;
