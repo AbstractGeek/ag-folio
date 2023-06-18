@@ -1,6 +1,18 @@
 /*******************************************************************************
  * ADDED: Custom styles (overides _base)
  ******************************************************************************/
+// Typography
+table {
+  td,
+  th {
+    font-size: 1rem;
+  }
+
+  th {
+    font-weight: normal;
+  }
+}
+
 
 // Footer
 footer.fixed-bottom {
