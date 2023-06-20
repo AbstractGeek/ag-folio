@@ -52,28 +52,27 @@ layout: default
         <article>
           <div class="clearfix">
             <br>
-            <h2>about me</h2><br>
+            <h3>about me</h3>
             {{ content }}
           </div>
 
           <!-- News -->
           {% if page.news and site.announcements.enabled -%}
           <br>
-          <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
+          <h3><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h3>
           {%- include news.html limit=true %}
           {%- endif %}
 
           <!-- Latest posts -->
           {% if page.latest_posts -%}
           <br>
-          <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
+          <h3><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h3>
           {%- include latest_posts.html %}
           {%- endif %}
 
           <!-- Selected papers -->
           {% if page.selected_papers -%}
-          <br>
-          <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
+          <h3><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h3>
           {%- include selected_papers.html %}
           {%- endif %}
         </article>

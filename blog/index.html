@@ -25,18 +25,92 @@ pagination:
   </div>
   {% endif %}
 
-  {% if site.display_tags %}
-  <div class="tag-list">
-    <ul class="p-0 m-0">
-      {% for tag in site.display_tags %}
-        <li>
-          <i class="fas fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>
-        </li>
-        {% unless forloop.last %}
-          <p>&bull;</p>
-        {% endunless %}
-      {% endfor %}
-    </ul>
+  {% if site.display_tags or site.display_categories or site.display_years %}
+  <div class="blog-metadata">
+    {% if site.display_tags %}
+    <div class="tag-list">
+      {% if site.display_tag_list %}
+      <ul class="p-0 m-0">
+        {% for tag in site.display_tag_list %}
+          <li>
+            <i class="fas fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>
+          </li>
+          {% unless forloop.last %}
+            <p>&bull;</p>
+          {% endunless %}
+        {% endfor %}
+      </ul>
+      {% else %}
+        {% assign tags = '' | split: '' %}
+        {% for tag in site.tags %}
+            {% assign tagName = tag | first | split: ' ' %}
+            {% assign tags = tags | concat: tagName %}
+        {% endfor %}
+        {% assign tags = tags | sort_natural %}
+        <ul class="p-0 m-0">
+          {% for tag in tags %}
+            <li>
+              <i class="fas fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>
+              {% unless forloop.last %}
+              &nbsp; &bull; &nbsp;
+            </li>
+            {% endunless %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+      </div>
+    {% endif %}
+
+    {% if site.display_categories %}
+    <div class="tag-list">
+      {% if site.display_category_list %}
+      <ul class="p-0 m-0">
+        {% for category in site.display_category_list %}
+          <li>
+            <i class="fas fa-tag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ category }}</a>
+          </li>
+          {% unless forloop.last %}
+            <p>&bull;</p>
+          {% endunless %}
+        {% endfor %}
+      </ul>
+      {% else %}
+        {% assign categories = '' | split: '' %}
+        {% for category in site.categories %}
+            {% assign catName = category | first | split: ' ' %}
+            {% assign categories = categories | concat: catName %}
+        {% endfor %}
+        {% assign categories = categories | sort_natural %}
+        <ul class="p-0 m-0">
+          {% for category in categories %}
+            <li>
+              <i class="fas fa-tag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ category }}</a>
+              {% unless forloop.last %}
+              &nbsp; &bull; &nbsp;
+            </li>
+            {% endunless %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+      </div>
+    {% endif %}
+
+    {% if site.display_years %}
+    <div class="tag-list">
+      {% if site.display_year_list %}
+      <ul class="p-0 m-0">
+        {% for year in site.display_year_list %}
+          <li>
+            <i class="fas fa-calendar fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ year }}</a>
+          </li>
+          {% unless forloop.last %}
+            <p>&nbsp; &bull; &nbsp;</p>
+          {% endunless %}
+        {% endfor %}
+      </ul>
+      {% endif %}
+      </div>
+    {% endif %}
   </div>
   {% endif %}
 

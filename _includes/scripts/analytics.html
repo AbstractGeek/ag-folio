@@ -16,3 +16,6 @@
     panelbear('config', { site: '{{site.panelbear_analytics}}' });
   </script>
 {%- endif -%}
+{%- if site.enable_umami_analytics -%}
+<script async defer data-website-id="{{site.umami_analytics}}" src="{{site.umami_js}}"></script>
+{%- endif -%}
