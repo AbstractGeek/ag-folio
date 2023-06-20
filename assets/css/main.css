@@ -1166,34 +1166,6 @@ footer.sticky-bottom {
   transform: scale(1.01);
 }
 
-.outreach a {
-  text-decoration: none;
-}
-.outreach a:hover .card-title {
-  color: var(--global-theme-color);
-}
-.outreach .card img {
-  width: 100%;
-}
-.outreach .card .card-title {
-  font-size: 1.5rem;
-}
-.outreach .card:hover {
-  transform: scale(1.01);
-}
-.outreach .grid-sizer, .outreach .grid-item {
-  width: 300px;
-  margin-bottom: 10px;
-}
-.outreach h2.category {
-  color: var(--global-divider-color);
-  border-bottom: 1px solid var(--global-divider-color);
-  padding-top: 0.5rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  text-align: right;
-}
-
 .publications {
   margin-top: 2rem;
 }
@@ -1241,6 +1213,39 @@ footer.sticky-bottom {
 }
 .blog-metadata .tag-list a {
   color: var(--global-text-color-light);
+}
+
+.writing a {
+  text-decoration: none;
+}
+.writing a:hover .card-title {
+  color: var(--global-hover-color);
+}
+.writing h2.category {
+  color: var(--global-divider-color);
+  border-bottom: 1px solid var(--global-divider-color);
+  padding-top: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: right;
+}
+.writing .card {
+  border-style: hidden;
+  border: none;
+  box-shadow: none;
+}
+.writing .card:hover {
+  transform: scale(1.02);
+}
+.writing .card h5 {
+  font-size: 1.25rem;
+}
+.writing .card h6 {
+  font-size: 1rem;
+}
+.writing figure,
+.writing img {
+  max-width: 20vw;
 }
 
 /*# sourceMappingURL=main.css.map */
