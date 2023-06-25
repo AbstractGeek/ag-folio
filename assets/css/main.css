@@ -1208,7 +1208,8 @@ footer.sticky-bottom {
   padding-top: 1rem;
   padding-bottom: 0rem;
 }
-.blog-metadata .tag-list ul p, .blog-metadata .tag-list ul li {
+.blog-metadata .tag-list ul p,
+.blog-metadata .tag-list ul li {
   padding: 0rem 0rem;
 }
 .blog-metadata .tag-list a {
@@ -1241,7 +1242,10 @@ footer.sticky-bottom {
   font-size: 1.25rem;
 }
 .writing .card h6 {
-  font-size: 1rem;
+  font-size: 0.9rem;
+}
+.writing .card .card-subtitle {
+  color: var(--global-theme-color);
 }
 .writing figure,
 .writing img {
