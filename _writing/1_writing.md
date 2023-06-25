@@ -8,4 +8,5 @@ redirect: https://en.wikipedia.org/wiki/Writing
 img: assets/img/12.jpg
 importance: 1
 category: features
+highlighted: true
 ---

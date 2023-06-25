@@ -3,6 +3,7 @@
  ******************************************************************************/
 // General Typography
 table {
+
   td,
   th {
     font-size: 1rem;
@@ -16,13 +17,13 @@ table {
 
 // Footer
 footer.fixed-bottom {
-    .container{
-        text-align: center;
-    }
-}
-  
-footer.sticky-bottom {
+  .container {
     text-align: center;
+  }
+}
+
+footer.sticky-bottom {
+  text-align: center;
 }
 
 // About page header
@@ -32,74 +33,84 @@ footer.sticky-bottom {
       width: 25vw;
     }
   }
-  .desc{
-      color: var(--global-theme-color);
+
+  .desc {
+    color: var(--global-theme-color);
   }
 
-  .address{
+  .address {
+    color: var(--global-text-color);
+
+    a {
       color: var(--global-text-color);
-      a{
-          color: var(--global-text-color);
-      }
+    }
   }
 
   // Social
   .social {
-      text-align: left;
-      .contact-icons {
+    text-align: left;
+
+    .contact-icons {
       font-size: 2.5rem;
+
       a {
-          i::before {
+        i::before {
           color: var(--global-text-color);
           transition-property: all 0.2s ease-in-out;
-          }
-          &:hover {
+        }
+
+        &:hover {
           i::before {
-              color: var(--global-theme-color);
+            color: var(--global-theme-color);
           }
-          }
+        }
       }
-      }
-      .contact-note {
+    }
+
+    .contact-note {
       font-size: 0.9rem;
-      }
+    }
   }
 }
 
 // Projects
 .projects {
-    .card {
-        .card-title{
-          font-size: 1.5rem;
-        }
-  
-        &:hover {
-          transform: scale(1.01);
-        }
-  
-      }
+  .card {
+    .card-title {
+      font-size: 1.5rem;
+    }
+
+    &:hover {
+      transform: scale(1.01);
+    }
+
+  }
 }
-  
-  // Publications
+
+// Publications
 .publications {
   margin-top: 2rem;
+
   ol.bibliography {
     li {
       .author {
         a {
           border-bottom: 1px dashed var(--global-text-color);
           color: var(--global-text-color);
+
           &:hover {
             border-bottom-style: solid;
             text-decoration: none;
             color: var(--global-hover-color);
           }
         }
-        > em {
+
+        >em {
           color: var(--global-theme-color);
         }
       }
-      .pub-note { 
+
+      .pub-note {
         font-size: small;
         font-style: italic;
         color: var(--global-theme-color);
@@ -109,20 +120,22 @@ footer.sticky-bottom {
 }
 
 // Blog
-.header-bar{
+.header-bar {
   border-bottom: none;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  h1{
+
+  h1 {
     font-size: 3.5rem;
   }
-  h2{
+
+  h2 {
     font-size: 1.75rem;
   }
 
 }
 
-.blog-metadata{
+.blog-metadata {
   border-bottom: 1px solid var(--global-divider-color);
   font-size: small;
 
@@ -132,12 +145,14 @@ footer.sticky-bottom {
     padding-bottom: 0rem;
 
     ul {
-      p, li {
+
+      p,
+      li {
         padding: 0rem 0rem;
       }
     }
 
-    a{
+    a {
       color: var(--global-text-color-light);
     }
   }
@@ -166,20 +181,25 @@ footer.sticky-bottom {
   }
 
 
-  .card{
+  .card {
     border-style: hidden;
-    border:none;
+    border: none;
     box-shadow: none;
-  
+
     &:hover {
       transform: scale(1.02);
     }
 
-    h5{
+    h5 {
       font-size: 1.25rem;
     }
-    h6{
-      font-size: 1rem;
+
+    h6 {
+      font-size: 0.9rem;
+    }
+
+    .card-subtitle {
+      color: var(--global-theme-color);
     }
   }
 
@@ -187,6 +207,6 @@ footer.sticky-bottom {
   img {
     max-width: 20vw;
   }
-  
-  
+
+
 }
