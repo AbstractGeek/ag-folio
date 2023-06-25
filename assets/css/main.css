@@ -1234,6 +1234,7 @@ footer.sticky-bottom {
   border-style: hidden;
   border: none;
   box-shadow: none;
+  background-color: var(--global-bg-color);
 }
 .writing .card:hover {
   transform: scale(1.02);
