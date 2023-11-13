@@ -1,0 +1,20 @@
+<!-- Code from https://github.com/reinaldoacdc/reinaldoacdc.github.io/blob/1fd84b828d5e4568c146faf61ddc59d300700d0a/_includes/scripts/mermaid.html -->
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+
+<script>
+  let currentTheme = localStorage.getItem("theme")
+  document.addEventListener('DOMContentLoaded', function () {
+    if (currentTheme == "light") {
+      mermaid_theme = "default"
+    } else {
+      mermaid_theme = "dark"
+    }
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: mermaid_theme,
+    })
+    window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'))
+  });
+
+</script>
