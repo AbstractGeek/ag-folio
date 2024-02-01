@@ -24,7 +24,7 @@ nav_order: 7
   <!-- Generate cards for each writing type -->
   <div class="list-style mx-auto">
     {%- for project in categorized_projects -%}
-      {% include writing.html %}
+      {% include writing.liquid %}
     {%- endfor %}
   </div>
   {% endfor %}
@@ -39,7 +39,7 @@ nav_order: 7
   <!-- Generate cards for each project -->
   <div class="list-style mx-auto">
     {%- for project in sorted_projects -%}
-      {% include writing.html %}
+      {% include writing.liquid %}
     {%- endfor %}
   </div>
 {%- endif -%}
