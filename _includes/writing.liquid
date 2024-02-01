@@ -1,0 +1,15 @@
+<!-- _includes/writing.liquid -->
+{% if project.redirect -%}
+<a href="{{ project.redirect }}">
+{%- else -%}
+<a href="{{ project.url | relative_url }}">
+{%- endif %}
+    <div class="card hoverable mb-3">
+        <div class="card-body">
+            <h5 class="card-title">{{ project.title }}</h5>
+            <h6 class="card-subtitle mb-2"> {{ project.outlet }} &middot; {{ project.date | date: '%B
+                %-d, %Y' }} </h6>
+            <p class="card-text">{{ project.description }}</p>
+        </div>
+    </div>
+</a>
