@@ -56,23 +56,26 @@ layout: default
 
     <!-- News -->
     {% if page.news and site.announcements.enabled -%}
-    <br>
-    <h3><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h3>
-    {%- include news.liquid limit=true %}
+      <h2>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+      </h2>
+      {% include news.liquid limit=true %}
     {%- endif %}
 
     <!-- Latest posts -->
-    {% if page.latest_posts -%}
-    <br>
-    <h3><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h3>
-    {%- include latest_posts.liquid %}
-    {%- endif %}
+    {% if page.latest_posts %}
+      <h2>
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+      </h2>
+      {% include latest_posts.liquid %}
+    {% endif %}
 
     <!-- Selected papers -->
-    {% if page.selected_papers -%}
-    <h3><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h3>
-    {%- include selected_papers.liquid %}
-    {%- endif %}
-  </article>
+    {% if page.selected_papers %}
+      <h2>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+      </h2>
+      {% include selected_papers.liquid %}
+    {% endif %}
 
 </div>
