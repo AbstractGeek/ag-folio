@@ -3,16 +3,31 @@
 My fork of [al-folio](https://github.com/alshedivat/al-folio) with some **minor** stylistic modifications. This is the theme that I use for my [personal website](https://dineshnatesan.com). 
 
 ## Changes
-These are the list of changes that need to be preserved when merging (a note to myself):
+
+List of changes that need to be preserved when merging (a note to myself):
 1. _config.yml 
-2. Add umami to analytics.liquid (if not preserved)
-3. Ensure custom scss are part of `main.scss`
-4. Update styles in _custom.scss + _themes_custom.scss 
-5. Update custom pages with new conventions and styles:
+1. Modified liquid files that need to be carefully merged
+    - analytics.liquid: added umami analytics
+1. Ensure custom scss are part of `main.scss`
+    - _custom.scss
+    - _theme_custom.scss 
+1. Update custom layouts/includes with new conventions and styles:
     - about_custom.liquid
     - writing.liquid
-6. Check github deploy actions and comment out ones that are not necessary. Double check ruby and bundle version, as differences might cause changes in Gemfile.lock which can cause deploy to fail. 
+1. Check if custom pages are working properly
+    - writing.md
+    - ext.md
+1. Check github deploy actions and comment out ones that are not necessary. Double check ruby and bundle version, as differences might cause changes in Gemfile.lock which can cause deploy to fail. 
 
+List of changes when using theme (a note to myself):
+1. Update _config.yml 
+    - Ensure to exclude theme and archive folders
+2. Check if all folders from theme is properly linked (or present)
+3. Update pages with custom scripts:
+    - Projects
+    - Outreach/Writing
+4. Update deploy scripts
+    - ensure deloy has the ability to pull from submodules
 
 ## al-folio readme
 <details>

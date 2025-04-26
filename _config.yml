@@ -155,7 +155,6 @@ collections:
     output: true
   projects:
     output: true
-  # added, not sure if it works
   writing:  
     output: true
 
