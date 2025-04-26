@@ -9,7 +9,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (8.0.2)
+    activesupport (7.2.2.1)
       base64
       benchmark (>= 0.3)
       bigdecimal
@@ -21,7 +21,6 @@ GEM
       minitest (>= 5.1)
       securerandom (>= 0.3)
       tzinfo (~> 2.0, >= 2.0.5)
-      uri (>= 0.13.1)
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
     base64 (0.2.0)
@@ -68,13 +67,13 @@ GEM
     feedjira (3.2.4)
       loofah (>= 2.3.1, < 3)
       sax-machine (>= 1.0, < 2)
-    ffi (1.17.1-aarch64-linux-gnu)
+    ffi (1.17.1-aarch64-linux)
     ffi (1.17.1-aarch64-linux-musl)
-    ffi (1.17.1-arm-linux-gnu)
+    ffi (1.17.1-arm-linux)
     ffi (1.17.1-arm-linux-musl)
     ffi (1.17.1-arm64-darwin)
     ffi (1.17.1-x86_64-darwin)
-    ffi (1.17.1-x86_64-linux-gnu)
+    ffi (1.17.1-x86_64-linux)
     ffi (1.17.1-x86_64-linux-musl)
     forwardable (1.3.3)
     forwardable-extended (2.6.0)
@@ -188,15 +187,14 @@ GEM
     mercenary (0.4.0)
     mini_mime (1.1.5)
     minitest (5.25.5)
-    multi_xml (0.7.1)
-      bigdecimal (~> 3.1)
+    multi_xml (0.6.0)
     namae (1.2.0)
       racc (~> 1.7)
-    nokogiri (1.18.5-aarch64-linux-gnu)
+    nokogiri (1.18.5-aarch64-linux)
       racc (~> 1.4)
     nokogiri (1.18.5-aarch64-linux-musl)
       racc (~> 1.4)
-    nokogiri (1.18.5-arm-linux-gnu)
+    nokogiri (1.18.5-arm-linux)
       racc (~> 1.4)
     nokogiri (1.18.5-arm-linux-musl)
       racc (~> 1.4)
@@ -204,7 +202,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.5-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.18.5-x86_64-linux-gnu)
+    nokogiri (1.18.5-x86_64-linux)
       racc (~> 1.4)
     nokogiri (1.18.5-x86_64-linux-musl)
       racc (~> 1.4)
@@ -225,11 +223,11 @@ GEM
     rexml (3.4.1)
     rouge (4.5.1)
     safe_yaml (1.0.5)
-    sass-embedded (1.86.0-aarch64-linux-gnu)
+    sass-embedded (1.86.0-aarch64-linux)
       google-protobuf (~> 4.30)
     sass-embedded (1.86.0-aarch64-linux-musl)
       google-protobuf (~> 4.30)
-    sass-embedded (1.86.0-arm-linux-gnueabihf)
+    sass-embedded (1.86.0-arm-linux)
       google-protobuf (~> 4.30)
     sass-embedded (1.86.0-arm-linux-musleabihf)
       google-protobuf (~> 4.30)
@@ -237,7 +235,7 @@ GEM
       google-protobuf (~> 4.30)
     sass-embedded (1.86.0-x86_64-darwin)
       google-protobuf (~> 4.30)
-    sass-embedded (1.86.0-x86_64-linux-gnu)
+    sass-embedded (1.86.0-x86_64-linux)
       google-protobuf (~> 4.30)
     sass-embedded (1.86.0-x86_64-linux-musl)
       google-protobuf (~> 4.30)
@@ -260,16 +258,16 @@ GEM
 
 PLATFORMS
   aarch64-linux
-  aarch64-linux-gnu
+  aarch64-linux
   aarch64-linux-musl
-  arm-linux-gnu
-  arm-linux-gnueabihf
+  arm-linux
+  arm-linux
   arm-linux-musl
   arm-linux-musleabihf
   arm64-darwin
   x86_64-darwin
   x86_64-linux
-  x86_64-linux-gnu
+  x86_64-linux
   x86_64-linux-musl
 
 DEPENDENCIES

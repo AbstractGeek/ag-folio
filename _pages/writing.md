@@ -14,7 +14,9 @@ nav_order: 7
 {%- if site.enable_project_categories and page.display_categories -%}
   <!-- Display categorized writing -->
   {%- for category in page.display_categories -%}
-  <h2 class="category">{{ category }}</h2>
+  <a id="{{ category }}" href=".#{{ category }}">
+    <h2 class="category">{{ category }}</h2>
+  </a>
   {%- if page.only_highlights -%}
     {%- assign categorized_projects = site.writing | where: "highlighted", true | where: "category", category -%}
   {%- else -%}
