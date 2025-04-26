@@ -1,18 +1,18 @@
 name: Docker Image CI
 
 on:
-  # if you want to run this on every push uncomment the following lines
-  # push:
-  #   branches:
-  #     - master
-  #     - main
-  #   paths:
-  #     - "bin/entry_point.sh"
-  #     - "Dockerfile"
-  #     - "Gemfile"
-  #     - "Gemfile.lock"
-  #     - "package.json"
-  #     - "package-lock.json"
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - ".github/workflows/deploy-image.yml"
+      - "bin/entry_point.sh"
+      - "Dockerfile"
+      - "Gemfile"
+      - "Gemfile.lock"
+      - "package.json"
+      - "package-lock.json"
 
 jobs:
   build:
