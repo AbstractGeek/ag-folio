@@ -51,6 +51,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/ag-folio/teaching/";
           },
+        },{id: "nav-ext",
+          title: "ext",
+          description: "A collection of my writings.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/ag-folio/https:/wikiroulette.co/";
+          },
         },{id: "nav-people",
           title: "people",
           description: "members of the lab or group",
@@ -78,6 +85,13 @@ ninja.data = [{
               section: "Dropdown",
               handler: () => {
                 window.location.href = "/ag-folio/blog/";
+              },
+            },{id: "dropdown-external",
+              title: "external",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "https://wikiroulette.co/";
               },
             },{id: "post-a-post-with-plotly-js",
         
