@@ -49,7 +49,7 @@ rss_icon: true
 # -----------------------------------------------------------------------------
 
 navbar_fixed: true
-footer_fixed: false
+footer_fixed: true
 search_enabled: true
 socials_in_search: true
 posts_in_search: true
@@ -197,6 +197,9 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
+  # custom exclude
+  - archive
+  - theme
 keep_files:
   - CNAME
   - .nojekyll
@@ -326,6 +329,9 @@ filtered_bibtex_keywords:
     supp,
     video,
     website,
+    # additional categories
+    biorxiv,
+    dataset,
   ]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
