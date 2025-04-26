@@ -3,14 +3,15 @@
 My fork of [al-folio](https://github.com/alshedivat/al-folio) with some **minor** stylistic modifications. This is the theme that I use for my [personal website](https://dineshnatesan.com). 
 
 ## Changes
-These are the list of changes that need to be preserved when merging:
+These are the list of changes that need to be preserved when merging (a note to myself):
 1. _config.yml 
 2. Add umami to analytics.liquid (if not preserved)
 3. Ensure custom scss are part of `main.scss`
 4. Update styles in _custom.scss + _themes_custom.scss 
 5. Update custom pages with new conventions and styles:
-  - about_custom.liquid
-  - writing.liquid
+    - about_custom.liquid
+    - writing.liquid
+6. Check github deploy actions and comment out ones that are not necessary. Double check ruby and bundle version, as differences might cause changes in Gemfile.lock which can cause deploy to fail. 
 
 
 ## al-folio readme
