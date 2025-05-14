@@ -334,3 +334,9 @@
 {% if site.newsletter.enabled %}
   <script defer src="{{ '/assets/js/newsletter.js' | relative_url | bust_file_cache }}"></script>
 {% endif %}
+
+<!-- Custom Scripts -->
+{% if site.enable_umami_analytics %}
+<!-- Umami Analytics -->
+<script async src="{{site.umami_js}}" data-website-id="{{site.umami_analytics}}"></script>
+{% endif %}

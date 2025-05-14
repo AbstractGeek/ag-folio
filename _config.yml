@@ -78,7 +78,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 google_analytics: # your Google Analytics measurement ID (format: G-XXXXXXXXXX)
 umami_analytics: 
 umami_js:
-cronitor_analytics: # cronitor RUM analytics site ID (format: XXXXXXXXX)
+cronitor_analytics: 025dee7b06610ea42663c60962701347 # cronitor RUM analytics site ID (format: XXXXXXXXX)
 pirsch_analytics: # your Pirsch analytics site ID (length 32 characters)
 openpanel_analytics: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
 
@@ -389,7 +389,7 @@ lazy_loading_images: true # enables lazy loading of images (recommended)
 
 enable_google_analytics: false # enables google analytics
 enable_umami_analytics: false   # enables umami analytics
-enable_cronitor_analytics: false # enables cronitor RUM analytics
+enable_cronitor_analytics: true # enables cronitor RUM analytics
 enable_pirsch_analytics: false # enables Pirsch analytics (https://pirsch.io/)
 enable_openpanel_analytics: false # enables Openpanel analytics (https://openpanel.dev/)
 enable_google_verification: false # enables google site verification

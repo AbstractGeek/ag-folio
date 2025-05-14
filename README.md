@@ -7,7 +7,7 @@ My fork of [al-folio](https://github.com/alshedivat/al-folio) with some **minor*
 List of changes that need to be preserved when merging (a note to myself):
 1. _config.yml 
 1. Modified liquid files that need to be carefully merged
-    - analytics.liquid: added umami analytics
+  - check files and ensure old files are removed (will keep accumulating)
 1. Ensure custom scss are part of `main.scss`
     - _custom.scss
     - _theme_custom.scss 
