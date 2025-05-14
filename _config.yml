@@ -198,8 +198,8 @@ exclude:
   - readme_preview/
   - vendor
   # custom exclude
-  - archive
-  - theme
+  - archive/
+  - theme/
 keep_files:
   - CNAME
   - .nojekyll
