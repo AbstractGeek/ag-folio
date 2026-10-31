@@ -16,11 +16,14 @@ on:
 
 jobs:
   build:
+    # Publishes the upstream image with upstream Docker Hub secrets; matches the
+    # guard on deploy-image.yml so tag pushes on template sites don't fail.
+    if: github.repository_owner == 'alshedivat'
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3

@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 /*******************************************************************************
  * ADDED: Custom styles (overides _base)
  ******************************************************************************/
@@ -193,6 +195,11 @@ table {
 
     .card-subtitle {
       color: var(--global-theme-color);
+      font-weight: 400;
+    }
+
+    .card-text {
+      color: #747373;
     }
   }
 
@@ -202,4 +209,21 @@ table {
   }
 
 
+}
+
+// Restore pre-v1 (Bootstrap/MDB-era) look that the Tailwind-based theme no longer provides
+.card-text {
+  color: #747373;
+}
+
+h3.card-title {
+  font-size: 1.75rem;
+}
+
+.card .post-meta {
+  font-weight: 400;
+}
+
+html[data-theme="dark"] .publications pre {
+  background-color: var(--global-code-bg-color);
 }
