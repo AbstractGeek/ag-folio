@@ -1,35 +1,40 @@
 # ag-folio
 
-My fork of [al-folio](https://github.com/alshedivat/al-folio) with some **minor** stylistic modifications. This is the theme that I use for my [personal website](https://dineshnatesan.com). 
+My fork of [al-folio](https://github.com/alshedivat/al-folio) with some **minor** stylistic modifications. This is the theme that I use for my [personal website](https://dineshnatesan.com).
 
 ## Changes
 
 List of changes that need to be preserved when merging (a note to myself):
-1. _config.yml 
+
+1. _config.yml
 1. Modified liquid files that need to be carefully merged
-  - check files and ensure old files are removed (will keep accumulating)
+
+- check files and ensure old files are removed (will keep accumulating)
+
 1. Ensure custom scss are part of `main.scss`
-    - _custom.scss
-    - _theme_custom.scss 
+   - _custom.scss
+   - _theme_custom.scss
 1. Update custom layouts/includes with new conventions and styles:
-    - about_custom.liquid
-    - writing.liquid
+   - about_custom.liquid
+   - writing.liquid
 1. Check if custom pages are working properly
-    - writing.md
-    - ext.md
-1. Check github deploy actions and comment out ones that are not necessary. Double check ruby and bundle version, as differences might cause changes in Gemfile.lock which can cause deploy to fail. 
+   - writing.md
+   - ext.md
+1. Check github deploy actions and comment out ones that are not necessary. Double check ruby and bundle version, as differences might cause changes in Gemfile.lock which can cause deploy to fail.
 
 List of changes when using theme (a note to myself):
-1. Update _config.yml 
-    - Ensure to exclude theme and archive folders
+
+1. Update _config.yml
+   - Ensure to exclude theme and archive folders
 2. Check if all folders from theme is properly linked (or present)
 3. Update pages with custom scripts:
-    - Projects
-    - Outreach/Writing
+   - Projects
+   - Outreach/Writing
 4. Update deploy scripts
-    - ensure deloy has the ability to pull from submodules
+   - ensure deloy has the ability to pull from submodules
 
 ## al-folio readme
+
 <details>
   <summary>Click me</summary>
 
@@ -86,6 +91,9 @@ Want to learn more about Jekyll? Check out [this tutorial](https://www.taniarasc
 
 <!--ts-->
 
+- [ag-folio](#ag-folio)
+  - [Changes](#changes)
+  - [al-folio readme](#al-folio-readme)
 - [al-folio](#al-folio)
   - [Getting started](#getting-started)
   - [Table Of Contents](#table-of-contents)
