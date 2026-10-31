@@ -1,0 +1,26 @@
+{% comment %}
+  Thumbnail card for a featured episode.
+  Params: ep (episode), client (client name), series (series name, optional)
+{% endcomment %}
+{%- assign thumb = include.ep.thumbnail -%}
+{%- if thumb == nil and include.ep.url contains 'youtube.com' -%}
+  {%- if include.ep.url contains 'shorts/' -%}
+    {%- assign vid = include.ep.url | split: 'shorts/' | last | split: '?' | first -%}
+  {%- else -%}
+    {%- assign vid = include.ep.url | split: 'v=' | last | split: '&' | first -%}
+  {%- endif -%}
+  {%- assign thumb = 'https://img.youtube.com/vi/' | append: vid | append: '/mqdefault.jpg' -%}
+{%- endif -%}
+<a class="fc-card" href="{{ include.ep.url }}" target="_blank" rel="noopener">
+  <div class="fc-card-thumb">
+    {%- if thumb -%}
+      <img src="{{ thumb }}" alt="" loading="lazy">
+    {%- else -%}
+      <i class="fa-solid fa-newspaper fc-card-fallback" aria-hidden="true"></i>
+    {%- endif -%}
+  </div>
+  <div class="fc-card-body">
+    <div class="fc-card-tag">{{ include.series | default: include.client }}</div>
+    <div class="fc-card-title">{{ include.ep.title }}</div>
+  </div>
+</a>

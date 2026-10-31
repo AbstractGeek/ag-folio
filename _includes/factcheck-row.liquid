@@ -1,0 +1,6 @@
+{%- assign year = include.ep.date | date: '%Y' -%}
+<li class="fc-row">
+  <a href="{{ include.ep.url }}" target="_blank" rel="noopener">{{ include.ep.title }}</a>
+  {%- if include.ep.format == 'short' %} <span class="fc-badge">Short</span>{% endif -%}
+  {%- if year and year != '2000' %}<span class="fc-date">{{ include.ep.date | date: '%b %Y' }}</span>{% endif -%}
+</li>
