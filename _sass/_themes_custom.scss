@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "variables" as *;
 
 /*******************************************************************************
@@ -11,7 +12,7 @@ $day-color-hover:            #FF9800 !default;                         // orange
 // Night theme colors
 $night-background-color:     $black-color !default;                         
 $night-color-main:           #2ce0a1 !default;
-$night-color-hover:          darken($night-color-main, 10%); 
+$night-color-hover:          color.adjust($night-color-main, $lightness: -10%);
 $night-card-color:           #212121 !default;
 
 
