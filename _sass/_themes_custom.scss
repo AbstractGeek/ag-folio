@@ -1,4 +1,3 @@
-@use "sass:color";
 @use "variables" as *;
 
 /*******************************************************************************
@@ -10,10 +9,13 @@ $day-color-main:             #E65100 !default;                         // orange
 $day-color-hover:            #FF9800 !default;                         // orange 500 material.io
 
 // Night theme colors
-$night-background-color:     $black-color !default;                         
-$night-color-main:           #2ce0a1 !default;
-$night-color-hover:          color.adjust($night-color-main, $lightness: -10%);
-$night-card-color:           #212121 !default;
+$night-background-color:     #181A1B !default;
+$night-color-main:           #F29A52 !default;
+$night-color-hover:          #FFB875 !default;
+$night-card-color:           #232527 !default;
+$night-text-color:           #F2EEE8 !default;
+$night-text-color-light:     #B9B2AA !default;
+$night-divider-color:        #383B3D !default;
 
 
 /*******************************************************************************
@@ -33,9 +35,11 @@ $night-card-color:           #212121 !default;
   --global-bg-color: #{$night-background-color};
   --global-theme-color: #{$night-color-main};
   --global-hover-color: #{$night-color-hover};
+  --global-text-color: #{$night-text-color};
+  --global-text-color-light: #{$night-text-color-light};
   --global-footer-bg-color: #{$night-background-color};
-  --global-footer-text-color: #{$grey-color-light};
+  --global-footer-text-color: #{$night-text-color-light};
   --global-footer-link-color: #{$night-color-main};
-  --global-divider-color: #{$night-color-main};
+  --global-divider-color: #{$night-divider-color};
   --global-card-bg-color: #{$night-card-color};
  }
