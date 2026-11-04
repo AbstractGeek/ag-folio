@@ -210,8 +210,6 @@ collections:
     output: true
   projects:
     output: true
-  writing:  
-    output: true
 
 # -----------------------------------------------------------------------------
 # Jekyll settings

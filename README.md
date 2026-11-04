@@ -16,7 +16,6 @@ List of changes that need to be preserved when merging (a note to myself):
    - _theme_custom.scss
 1. Update custom layouts/includes with new conventions and styles:
    - about_custom.liquid
-   - writing.liquid
 1. Check if custom pages are working properly
    - writing.md
    - ext.md

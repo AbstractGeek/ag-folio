@@ -154,11 +154,9 @@
       {% endif %}
       {% if entry.annotation %}
         <i
-          class="fa-solid fa-circle-info ml-1"
-          data-toggle="popover"
-          data-placement="top"
-          data-html="true"
-          data-content="{{ entry.annotation | escape }}"
+          class="fa-solid fa-circle-info ml-1 annotation-tip"
+          tabindex="0"
+          title="{{ entry.annotation | strip_html | escape }}"
         >
         </i>
       {% endif %}

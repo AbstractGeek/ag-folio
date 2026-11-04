@@ -4,46 +4,26 @@ title: writing
 permalink: /writing/
 description: A collection of my writings.
 nav: true
-only_highlights: false
-display_categories: [features, short]
+# Entries live in _data/writing.yml
+sort_order: desc # desc = newest first, asc = oldest first
+display_categories: [features, short] # set to [] for a single flat list
 nav_order: 7
 ---
 
-<!-- pages/writing.md -->
 <div class="writing">
-{%- if site.enable_project_categories and page.display_categories -%}
-  <!-- Display categorized writing -->
-  {%- for category in page.display_categories -%}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {%- if page.only_highlights -%}
-    {%- assign categorized_projects = site.writing | where: "highlighted", true | where: "category", category -%}
-  {%- else -%}
-    {%- assign categorized_projects = site.writing | where: "category", category -%}
-  {%- endif -%}
-  {%- assign sorted_projects = categorized_projects | sort: "importance" | sort: "date" -%}
-  <!-- Generate cards for each writing type -->
-  <div class="list-style mx-auto">
-    {%- for project in categorized_projects -%}
-      {% include writing.liquid %}
-    {%- endfor %}
-  </div>
-  {% endfor %}
-
-{%- else -%}
-<!-- Display writing without categories -->
-  {%- if page.only_highlights -%}
-  {%- assign sorted_projects = site.writing | where: "highlighted", true | sort: "importance" | sort: "date" -%}
-  {%- else -%}
-  {%- assign sorted_projects = site.writing | sort: "importance" | sort: "date" -%}
-  {%- endif -%}
-  <!-- Generate cards for each project -->
-  <div class="list-style mx-auto">
-    {%- for project in sorted_projects -%}
-      {% include writing.liquid %}
-    {%- endfor %}
-  </div>
+{%- assign all_items = site.data.writing | sort: "date" -%}
+{%- if page.sort_order != "asc" -%}
+  {%- assign all_items = all_items | reverse -%}
 {%- endif -%}
-
+{%- if page.display_categories and page.display_categories.size > 0 -%}
+  {%- for category in page.display_categories -%}
+  {%- assign items = all_items | where: "category", category -%}
+  {%- if items.size > 0 -%}
+  <h2 class="category" id="{{ category }}">{{ category }}</h2>
+  {% include writing-list.liquid items=items %}
+  {%- endif -%}
+  {%- endfor -%}
+{%- else -%}
+  {% include writing-list.liquid items=all_items %}
+{%- endif -%}
 </div>

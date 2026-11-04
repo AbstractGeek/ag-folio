@@ -155,60 +155,70 @@ table {
 
 // Writing
 .writing {
-  a {
-    text-decoration: none;
-
-    &:hover {
-      .card-title {
-        color: var(--global-hover-color);
-      }
-    }
-  }
-
   h2.category {
     color: var(--global-divider-color);
     border-bottom: 1px solid var(--global-divider-color);
     padding-top: 0.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
     text-align: right;
   }
 
+  .writing-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-  .card {
-    border-style: hidden;
-    border: none;
-    box-shadow: none;
-    background-color: var(--global-bg-color);
+  .writing-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px dotted var(--global-divider-color);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .writing-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
 
     &:hover {
-      transform: scale(1.02);
-    }
-
-    h5 {
-      font-size: 1.25rem;
-    }
-
-    h6 {
-      font-size: 0.9rem;
-    }
-
-    .card-subtitle {
-      color: var(--global-theme-color);
-      font-weight: 400;
-    }
-
-    .card-text {
-      color: #747373;
+      color: var(--global-hover-color);
     }
   }
 
-  figure,
-  img {
-    max-width: 20vw;
+  .writing-desc {
+    margin: 0.1rem 0 0;
+    font-size: 0.9rem;
+    color: var(--global-text-color-light);
   }
 
+  .writing-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-shrink: 0;
+    text-align: right;
+    white-space: nowrap;
+  }
 
+  .writing-outlet {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--global-theme-color);
+  }
+
+  .writing-date {
+    margin-top: 0.1rem;
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
 }
 
 // Restore pre-v1 (Bootstrap/MDB-era) look that the Tailwind-based theme no longer provides
@@ -226,4 +236,8 @@ h3.card-title {
 
 html[data-theme="dark"] .publications pre {
   background-color: var(--global-code-bg-color);
+}
+
+.annotation-tip {
+  cursor: help;
 }

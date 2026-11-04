@@ -1,0 +1,17 @@
+<!-- _includes/writing-list.liquid -->
+<ul class="writing-list">
+  {%- for item in include.items -%}
+    <li class="writing-item">
+      <div class="writing-main">
+        <a class="writing-title" href="{{ item.url }}">{{ item.title }}</a>
+        {%- if item.description -%}
+          <p class="writing-desc">{{ item.description }}</p>
+        {%- endif -%}
+      </div>
+      <div class="writing-meta">
+        <span class="writing-outlet">{{ item.outlet }}</span>
+        <span class="writing-date">{{ item.date | date: "%b %-d, %Y" }}</span>
+      </div>
+    </li>
+  {%- endfor -%}
+</ul>

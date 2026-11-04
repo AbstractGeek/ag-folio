@@ -1,0 +1,29 @@
+# Writing entries. Rendered by _pages/writing.md
+# Fields: title, url, outlet, date (YYYY-MM-DD), description (optional), category
+- title: Writing piece 1
+  url: https://en.wikipedia.org/wiki/Writing
+  outlet: Wikipedia
+  date: 2021-09-17
+  description: Description of writing piece 1
+  category: features
+
+- title: Writing piece 2
+  url: https://en.wikipedia.org/wiki/Writing
+  outlet: Wikipedia
+  date: 2021-09-18
+  description: Description of writing piece 2
+  category: features
+
+- title: Writing piece 3
+  url: https://en.wikipedia.org/wiki/Writing
+  outlet: Wikipedia
+  date: 2021-09-19
+  description: Description of writing piece 3
+  category: features
+
+- title: Writing piece 4
+  url: https://en.wikipedia.org/wiki/Writing
+  outlet: Wikipedia
+  date: 2021-09-17
+  description: Description of writing piece 4
+  category: short
