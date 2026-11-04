@@ -7,6 +7,7 @@
 // Day theme colors
 $day-color-main:             #E65100 !default;                         // orange 900 material.io
 $day-color-hover:            #FF9800 !default;                         // orange 500 material.io
+$day-divider-color: #AAABAB !default;
 
 // Night theme colors
 $night-background-color:     #181A1B !default;
@@ -15,7 +16,7 @@ $night-color-hover:          #FFB875 !default;
 $night-card-color:           #232527 !default;
 $night-text-color:           #F2EEE8 !default;
 $night-text-color-light:     #B9B2AA !default;
-$night-divider-color:        #383B3D !default;
+$night-divider-color:        #56595B !default;
 
 
 /*******************************************************************************
@@ -28,7 +29,7 @@ $night-divider-color:        #383B3D !default;
   --global-footer-bg-color: #{$white-color};
   --global-footer-text-color: #{$grey-color};
   --global-footer-link-color: #{$day-color-main};
-  --global-divider-color: #{$day-color-main};
+  --global-divider-color: #{$day-divider-color};
  }
 
  html[data-theme="dark"] {
