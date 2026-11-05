@@ -69,15 +69,154 @@ table {
 
 // Projects
 .projects {
-  .card {
-    .card-title {
-      font-size: 1.5rem;
-    }
+  .project-filters {
+    margin: 0.5rem 0 1.5rem;
+  }
+
+  .project-cats,
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .project-cats {
+    margin-bottom: 0.5rem;
+  }
+
+  // Categories: outlined chips in the theme colour; tags: same shape in the light text colour
+  .project-cat,
+  .project-row-cat,
+  .project-tag,
+  .project-row-tag {
+    background: none;
+    border: 1px solid var(--global-theme-color);
+    border-radius: 0;
+    padding: 0 0.5rem;
+    font: inherit;
+    line-height: 1.5;
+    cursor: pointer;
+    color: var(--global-theme-color);
 
     &:hover {
-      transform: scale(1.01);
+      color: var(--global-hover-color);
+      border-color: var(--global-hover-color);
+    }
+  }
+
+  .project-tag,
+  .project-row-tag {
+    border-color: var(--global-text-color-light);
+    color: var(--global-text-color-light);
+  }
+
+  .project-cat,
+  .project-tag {
+    font-size: 0.75rem;
+
+    &.active {
+      background: var(--global-theme-color);
+      border-color: var(--global-theme-color);
+      color: var(--global-bg-color);
+    }
+  }
+
+  .project-row-cat,
+  .project-row-tag {
+    font-size: 0.75rem;
+  }
+
+  .project-year-label {
+    color: var(--global-divider-color);
+    border-bottom: 1px solid var(--global-divider-color);
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    padding-top: 0.5rem;
+    margin: 1.5rem 0 0.5rem;
+    text-align: right;
+  }
+
+  .project-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px dotted var(--global-divider-color);
+
+    &:last-child {
+      border-bottom: none;
     }
 
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  .project-year[hidden] {
+    display: none;
+  }
+
+  .project-thumb {
+    flex-shrink: 0;
+
+    img {
+      width: 56px;
+      height: 56px;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+    }
+  }
+
+  .project-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .project-title {
+    color: var(--global-theme-color);
+    font-size: 1.1rem;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-hover-color);
+    }
+  }
+
+  .project-desc {
+    margin: 0.1rem 0 0;
+    font-size: 0.9rem;
+    color: var(--global-text-color-light);
+  }
+
+  .project-row-chips {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem;
+    margin-top: 0.25rem;
+  }
+
+  .project-chip-sep {
+    align-self: stretch;
+    width: 1px;
+    margin: 0.1rem 0.3rem;
+    background: var(--global-divider-color);
+  }
+
+  .project-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .project-link {
+    color: var(--global-text-color-light);
+    line-height: 1;
+
+    &:hover {
+      color: var(--global-hover-color);
+    }
   }
 }
 
