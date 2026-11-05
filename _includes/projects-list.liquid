@@ -42,7 +42,6 @@
       {%- endif -%}
     {%- endfor -%}
     <section class="project-year" data-year="{{ year }}">
-      <h2 class="project-year-label">{{ year }}</h2>
       {%- for project in year_items -%}
         <div class="project-row" data-cats="{{ project.categories | join: '|' }}" data-tags="{{ project.tags | join: '|' }}">
           {%- if project.img -%}
@@ -51,32 +50,37 @@
             </a>
           {%- endif -%}
           <div class="project-main">
-            <a class="project-title" href="{{ project.url | relative_url }}">{{ project.title }}</a>
-            <p class="project-desc">{{ project.description }}</p>
-            <div class="project-row-chips">
-              {%- for cat in project.categories -%}
-                <button type="button" class="project-row-cat" data-cat="{{ cat }}">{{ cat }}</button>
-              {%- endfor -%}
-              {%- if project.categories.size > 0 and project.tags.size > 0 -%}
-                <span class="project-chip-sep" aria-hidden="true"></span>
-              {%- endif -%}
-              {%- for tag in project.tags -%}
-                <button type="button" class="project-row-tag" data-tag="{{ tag }}">{{ tag }}</button>
-              {%- endfor -%}
+            <div class="project-line">
+              <a class="project-title" href="{{ project.url | relative_url }}">{{ project.title }}</a>
+              <span class="project-year-tag">{{ year }}</span>
             </div>
-          </div>
-          <div class="project-links">
-            {%- if project.github -%}
-              {%- assign repos = project.github -%}
-              {%- if repos.first == nil or repos.first.size == 1 -%}
-                {%- assign repos = repos | split: "," -%}
-              {%- endif -%}
-              {%- for repo in repos -%}
-                <a class="project-link" href="{{ repo }}" target="_blank" rel="noopener" title="GitHub: {{ repo | split: '/' | last }}" aria-label="GitHub: {{ repo | split: '/' | last }}">
-                  <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>
-                </a>
-              {%- endfor -%}
-            {%- endif -%}
+            <p class="project-desc">{{ project.description }}</p>
+            <div class="project-line project-line-meta">
+              <div class="project-row-chips">
+                {%- for cat in project.categories -%}
+                  <button type="button" class="project-row-cat" data-cat="{{ cat }}">{{ cat }}</button>
+                {%- endfor -%}
+                {%- if project.categories.size > 0 and project.tags.size > 0 -%}
+                  <span class="project-chip-sep" aria-hidden="true"></span>
+                {%- endif -%}
+                {%- for tag in project.tags -%}
+                  <button type="button" class="project-row-tag" data-tag="{{ tag }}">{{ tag }}</button>
+                {%- endfor -%}
+              </div>
+              <div class="project-links">
+                {%- if project.github -%}
+                  {%- assign repos = project.github -%}
+                  {%- if repos.first == nil or repos.first.size == 1 -%}
+                    {%- assign repos = repos | split: "," -%}
+                  {%- endif -%}
+                  {%- for repo in repos -%}
+                    <a class="project-link" href="{{ repo }}" target="_blank" rel="noopener" title="GitHub: {{ repo | split: '/' | last }}" aria-label="GitHub: {{ repo | split: '/' | last }}">
+                      <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>
+                    </a>
+                  {%- endfor -%}
+                {%- endif -%}
+              </div>
+            </div>
           </div>
         </div>
       {%- endfor -%}

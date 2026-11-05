@@ -126,14 +126,22 @@ table {
     font-size: 0.75rem;
   }
 
-  .project-year-label {
-    color: var(--global-divider-color);
-    border-bottom: 1px solid var(--global-divider-color);
-    font-size: 1rem;
-    letter-spacing: 0.1em;
-    padding-top: 0.5rem;
-    margin: 1.5rem 0 0.5rem;
-    text-align: right;
+  .project-line {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .project-line-meta {
+    align-items: center;
+    margin-top: 0.25rem;
+  }
+
+  .project-year-tag {
+    font-size: 0.85rem;
+    line-height: 1.2;
+    color: var(--global-text-color-light);
   }
 
   .project-row {
@@ -142,10 +150,6 @@ table {
     gap: 1rem;
     padding: 0.5rem 0;
     border-bottom: 1px dotted var(--global-divider-color);
-
-    &:last-child {
-      border-bottom: none;
-    }
 
     &[hidden] {
       display: none;
@@ -194,7 +198,6 @@ table {
     flex-wrap: wrap;
     align-items: center;
     gap: 0.3rem;
-    margin-top: 0.25rem;
   }
 
   .project-chip-sep {
