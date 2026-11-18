@@ -38,21 +38,27 @@ layout: default
     {% endif %}
 
     {% if page.summary %}
-      <p class="about-facts"><strong>Summary:</strong> {{ page.summary }}</p>
+      <div class="about-block">
+        <strong class="about-block-label">Summary</strong>
+        <p class="about-block-body">
+          {%- for item in page.summary -%}
+            {{ item }}{% unless forloop.last %}<span class="about-dot">&nbsp;&#xb7;&nbsp;</span>{% endunless %}
+          {%- endfor -%}
+        </p>
+      </div>
     {% endif %}
 
     {% if page.currently %}
-      <h3 class="now-heading">currently...</h3>
-      <div class="now-cards">
-        {% for item in page.currently %}
-          <div class="now-card">
-            <h5>
-              {{ item.icon }}
-              {{ item.title }}
-            </h5>
-            <p>{{ item.description }}</p>
-          </div>
-        {% endfor %}
+      <div class="about-block">
+        <strong class="about-block-label">Currently</strong>
+        <ul class="about-block-body about-now">
+          {% for item in page.currently %}
+            <li>
+              <span>{{ item.icon }} {{ item.title }}</span>
+              <span class="about-now-desc">{{ item.description }}</span>
+            </li>
+          {% endfor %}
+        </ul>
       </div>
     {% endif %}
 
