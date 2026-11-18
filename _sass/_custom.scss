@@ -5,7 +5,6 @@
  ******************************************************************************/
 // General Typography
 table {
-
   td,
   th {
     font-size: 1rem;
@@ -16,9 +15,7 @@ table {
   }
 }
 
-
 // Footer
-
 
 // About page header
 .post-header {
@@ -30,6 +27,21 @@ table {
 
   .desc {
     color: var(--global-theme-color);
+  }
+
+  .about-hook {
+    display: block;
+    color: var(--global-text-color);
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 1rem 0 1.5rem;
+    padding-left: 1rem;
+    border-left: 4px solid var(--global-theme-color);
+  }
+
+  .about-facts {
+    font-size: 0.9rem;
   }
 
   .address {
@@ -64,6 +76,46 @@ table {
     .contact-note {
       font-size: 0.9rem;
     }
+  }
+
+  .now-heading {
+    font-size: 1.1rem;
+  }
+
+  .now-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0.5rem 0 1rem;
+
+    .now-card {
+      flex: 1 1 16rem;
+      padding: 0;
+      border: 0;
+
+      h5 {
+        margin: 0 0 0.5rem;
+        color: var(--global-theme-color);
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+      }
+
+      p {
+        margin: 0;
+        color: var(--global-text-color-light);
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
+
+.about-story summary {
+  color: var(--global-theme-color);
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 
@@ -241,7 +293,7 @@ table {
           }
         }
 
-        >em {
+        > em {
           color: var(--global-theme-color);
         }
       }
@@ -268,7 +320,6 @@ table {
   h2 {
     font-size: 1.75rem;
   }
-
 }
 
 .blog-metadata {
@@ -281,7 +332,6 @@ table {
     padding-bottom: 0rem;
 
     ul {
-
       p,
       li {
         padding: 0rem 0rem;
@@ -292,7 +342,6 @@ table {
       color: var(--global-text-color-light);
     }
   }
-
 }
 
 // Writing
