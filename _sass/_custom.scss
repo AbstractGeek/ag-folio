@@ -279,6 +279,14 @@ table {
 .publications {
   margin-top: 2rem;
 
+  h2.bibliography {
+    display: none;
+  }
+
+  ol.bibliography + ol.bibliography {
+    margin-top: 1rem;
+  }
+
   ol.bibliography {
     li {
       .author {
